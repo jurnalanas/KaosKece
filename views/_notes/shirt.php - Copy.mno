@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_ukuran" value="name:Id_ukuran;datatype:int,name:Ukuran;datatype:string" />
+</info>

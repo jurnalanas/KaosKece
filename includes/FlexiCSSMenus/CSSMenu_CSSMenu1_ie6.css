@@ -1,0 +1,876 @@
+ /*************************************************************************************************/
+/* IV.A. IE6 Hacks - General */
+/*************************************************************************************************/
+/* IV.A.1. IE6 hasLayout fix */
+ul.FM_CSS_CSSMenu1 {
+  zoom: 1;
+  display:inline;
+}
+/* IV.A.2. IE6 leaving extra spaces fix */
+ul.FM_CSS_CSSMenu1 li {
+  font-size: 0;
+  display:inline;
+}
+/* IV.A.3. IE6 minimize the size of the positioning table */
+ul.FM_CSS_CSSMenu1 table {
+  border-collapse: collapse;
+  margin-top:-1px;
+}
+/*************************************************************************************************/
+/* IV.B. IE6 Hacks - Positioning */
+/*************************************************************************************************/
+/* IV.B.1. Establish containing blocks on anchors instead of list items */
+ul.FM_CSS_CSSMenu1 li a:hover {
+  position: relative;
+}
+
+ul.FM_CSS_CSSMenu1 a:hover li a:hover {
+  position: relative;
+}
+/* IV.B.2. Hide and show rules for sub-menus */
+ul.FM_CSS_CSSMenu1 ul {
+  display: block;
+  visibility: hidden;
+}
+ul.FM_CSS_CSSMenu1 a:hover ul {
+  visibility: visible;
+}
+ul.FM_CSS_CSSMenu1 a:hover ul ul {
+  visibility: hidden;
+}
+ul.FM_CSS_CSSMenu1 a:hover a:hover ul {
+  visibility: visible;
+}
+ul.FM_CSS_CSSMenu1 a:hover a:hover ul ul {
+  visibility: hidden;
+}
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover ul {
+  visibility: visible;
+}
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover ul ul {
+  visibility: hidden;
+}
+
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover  a:hover ul {
+  visibility: visible;
+}
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover ul ul {
+  visibility: hidden;
+}
+
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover  a:hover a:hover ul {
+  visibility: visible;
+}
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover ul ul {
+  visibility: hidden;
+}
+
+
+/* Fix for auto button width problem on IE6 (auto was displayed as 100%) */
+ul.FM_CSS_CSSMenu1 li a {
+  float: left;
+}
+
+/*************************************************************************************************/
+/* IV.C. IE6 Hacks - Alternative CSS */
+/*************************************************************************************************/
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  LEVEL 1  ||
+	     * *      * *      * *    ||           ||
+*/
+
+/* IV.C.2. item hover CSS */
+/* button hover state - design settings */
+ul.FM_CSS_CSSMenu1 li a:hover {
+  background: #0003c7 url('') no-repeat left center scroll;
+  border-left: 0 dotted #000000;
+  border-top: 0 dotted #000000;
+  border-bottom: 0 dotted #000000;
+  border-right: 1px dotted #ffffff;
+}
+
+
+/* button hover state - font settings */
+ul.FM_CSS_CSSMenu1 li a:hover,
+ul.FM_CSS_CSSMenu1 li a:hover span.branch,
+ul.FM_CSS_CSSMenu1 li a:hover font.leaf {
+  font: normal normal normal 14px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: #0003c7;
+}
+
+
+/* button selected state (normal is same as hover) - design settings */
+ul.FM_CSS_CSSMenu1 li a.sel,
+ul.FM_CSS_CSSMenu1 li a.sel:hover {
+  background: #010340 url('') no-repeat left center scroll;
+  border-left: 0 dotted #000000;
+  border-top: 0 dotted #000000;
+  border-bottom: 0 dotted #000000;
+  border-right: 1px dotted #000000;
+}
+
+
+/* button selected state (normal is same as hover) - font settings */
+ul.FM_CSS_CSSMenu1 li a.sel,
+ul.FM_CSS_CSSMenu1 li a.sel span.branch,
+ul.FM_CSS_CSSMenu1 li a.sel font.leaf,
+ul.FM_CSS_CSSMenu1 li a.sel:hover,
+ul.FM_CSS_CSSMenu1 li a.sel:hover span.branch,
+ul.FM_CSS_CSSMenu1 li a.sel:hover font.leaf {
+  font: normal normal normal 14px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+
+/* IV.C.3. Duplicate has-submenu icon CSS */
+
+
+/* icon normal state*/
+ul.FM_CSS_CSSMenu1 li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon hover state*/
+ul.FM_CSS_CSSMenu1 li a:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon selected hover state*/
+ul.FM_CSS_CSSMenu1 li a.sel:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  LEVEL 2  ||
+	     * *      * *      * *    ||           ||
+*/
+
+/* IV.C.2. item hover CSS */
+
+
+/* button hover state - design settings */
+ul.FM_CSS_CSSMenu1 a:hover li a:hover {
+  background: #1441f7 none no-repeat left center scroll;
+  border-left: 0px dotted #cccccc;
+  border-top: 0px dotted #ffffff;
+  border-bottom: 0px dotted #ffffff;
+  border-right: 0px dotted #cccccc;
+}
+
+
+/* button hover state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover li a:hover,
+ul.FM_CSS_CSSMenu1 a:hover li a:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover li a:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #1441f7;
+}
+
+
+/* button selected state (normal is same as hover) - design settings */
+ul.FM_CSS_CSSMenu1 a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover li a.sel:hover {
+  background: #010340 none no-repeat left center scroll;
+  border-left: 0px dotted #cccccc;
+  border-top: 0px dotted #ffffff;
+  border-bottom: 0px dotted #ffffff;
+  border-right: 0px dotted #cccccc;
+}
+
+
+/* button selected state (normal is same as hover) - font settings */
+ul.FM_CSS_CSSMenu1 a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover li a.sel span.branch,
+ul.FM_CSS_CSSMenu1 a:hover li a.sel font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover li a.sel:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover li a.sel:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+/* button normal state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover li a font.leaf,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #0003c7;
+}
+
+/*  selected state button after a selected state button - font settings */
+ul.FM_CSS_CSSMenu1 a.sel:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a.sel span,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a.sel font,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a.sel:hover span,
+ul.FM_CSS_CSSMenu1 a.sel:hover li a.sel:hover font {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+
+/* IV.C.3. Duplicate has-submenu icon CSS */
+
+/* icon normal state*/
+ul.FM_CSS_CSSMenu1 a:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon hover state*/
+ul.FM_CSS_CSSMenu1 a:hover li a:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon selected hover state*/
+ul.FM_CSS_CSSMenu1 a:hover li a.sel:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon normal state after selected */
+ul.FM_CSS_CSSMenu1 a.sel:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  LEVEL 3  ||
+	     * *      * *      * *    ||           ||
+*/
+
+/* IV.C.2. item hover CSS */
+
+
+/* button hover state - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a:hover {
+  background: #1441f7 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+}
+
+
+/* button hover state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #1441f7;
+}
+
+
+/* button selected state (normal is same as hover) - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel:hover {
+  background: #010340 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+
+/* button selected state (normal is same as hover) - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+/* button normal state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #0003c7;
+}
+
+/*  selected state button after a selected state button - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a.sel span,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a.sel font,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a.sel:hover span,
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a.sel:hover font {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+
+/* IV.C.3. Duplicate has-submenu icon CSS */
+
+/* icon normal state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon selected hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a.sel:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon normal state after selected */
+ul.FM_CSS_CSSMenu1 a:hover a.sel:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  LEVEL 4  ||
+	     * *      * *      * *    ||           ||
+*/
+
+/* IV.C.2. item hover CSS */
+
+
+/* button hover state - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a:hover {
+  background: #1441f7 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+}
+
+
+/* button hover state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #1441f7;
+}
+
+
+/* button selected state (normal is same as hover) - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel:hover {
+  background: #010340 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+
+/* button selected state (normal is same as hover) - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+/* button normal state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #0003c7;
+}
+
+/*  selected state button after a selected state button - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a.sel span,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a.sel font,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a.sel:hover span,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a.sel:hover font {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+
+/* IV.C.3. Duplicate has-submenu icon CSS */
+
+/* icon normal state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon selected hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a.sel:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon normal state after selected */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a\.sel:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  LEVEL 5  ||
+	     * *      * *      * *    ||           ||
+*/
+
+/* IV.C.2. item hover CSS */
+
+
+/* button hover state - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a:hover {
+  background: #1441f7 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+}
+
+
+/* button hover state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #1441f7;
+}
+
+
+/* button selected state (normal is same as hover) - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel:hover {
+  background: #010340 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+
+/* button selected state (normal is same as hover) - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+/* button normal state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #0003c7;
+}
+
+/*  selected state button after a selected state button - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a.sel span,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a.sel font,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a.sel:hover span,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a.sel:hover font {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+
+/* IV.C.3. Duplicate has-submenu icon CSS */
+
+/* icon normal state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon selected hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a.sel:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon normal state after selected */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a\.sel:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  LEVEL 6  ||
+	     * *      * *      * *    ||           ||
+*/
+
+/* IV.C.2. item hover CSS */
+
+
+/* button hover state - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a:hover {
+  background: #1441f7 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+}
+
+
+/* button hover state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #1441f7;
+}
+
+
+/* button selected state (normal is same as hover) - design settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel:hover {
+  background: #010340 none no-repeat left center scroll;
+  border-left: 0px none #000000;
+  border-top: 0px dashed #ffffff;
+  border-bottom: 0px dashed #ffffff;
+  border-right: 0px none #000000;
+  color: #ffffff;
+  font-size: 12px;
+}
+
+
+/* button selected state (normal is same as hover) - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel:hover span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel:hover font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+/* button normal state - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a font.leaf,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a span.branch,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a font.leaf {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #0003c7;
+}
+
+/*  selected state button after a selected state button - font settings */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a.sel,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a.sel span,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a.sel font,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a.sel:hover,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a.sel:hover span,
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a.sel:hover font {
+  font: normal normal normal 12px/100% Arial,Helvetica,sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: left;
+  cursor: pointer;
+  background-color: #010340;
+}
+
+
+/* IV.C.3. Duplicate has-submenu icon CSS */
+
+/* icon normal state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+/* icon hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon selected hover state*/
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a:hover li a.sel:hover span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+/* icon normal state after selected */
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover a\.sel:hover li a span {
+  padding: 0px 0px 0px 0px;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+
+
+
+/*       * *      * *      * *    ||           ||
+	    * * *    * * *    * * *   ||  OFFSETS  ||
+	     * *      * *      * *    ||           ||
+*/
+
+
+
+ul.FM_CSS_CSSMenu1 li a:hover ul {
+  top: 36px;
+  left: 0px;
+}
+
+
+
+
+
+
+ul.FM_CSS_CSSMenu1 a:hover li a:hover ul {
+  top: 0px;
+  left: 128px;
+}
+
+
+
+
+
+
+ul.FM_CSS_CSSMenu1 a:hover a:hover li a:hover ul {
+  top: 0px;
+  left: 128px;
+}
+
+
+
+
+
+
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover li a:hover ul {
+  top: 0px;
+  left: 128px;
+}
+
+
+
+
+
+
+ul.FM_CSS_CSSMenu1 a:hover a:hover a:hover a:hover li a:hover ul {
+  top: 0px;
+  left: 128px;
+}
+
+
+
+
+
+
+
+
+/*       * *      * *      * *    ||           		||
+	    * * *    * * *    * * *   ||  CUSTOM STYLE  ||
+	     * *      * *      * *    ||           		||
+*/
+
+
+
+
+
+/* custom styles normal states*/
+
+

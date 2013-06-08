@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_produk" value="name:uploader;datatype:string,name:id;datatype:int,name:name;datatype:string,name:img;datatype:string,name:price;datatype:int" />
+	<infoitem key="UD_status" value="name:id_status;datatype:int,name:status;datatype:string" />
+</info>

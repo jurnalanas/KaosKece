@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_daftarbelanja" value="name:no_tagihan;datatype:int,name:username;datatype:string,name:id;datatype:string,name:name;datatype:string,name:size;datatype:string,name:price;datatype:int" />
+	<infoitem key="UD_tagihan" value="name:no_tagihan;datatype:int,name:username;datatype:string,name:id;datatype:string,name:name;datatype:string,name:size;datatype:string,name:price;datatype:int" />
+</info>
