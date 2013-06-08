@@ -1,0 +1,1 @@
+Dokumentasi selengkapnya di [jurnalanas.github.io](http://jurnalanas.github.io "Jurnal Anas")
